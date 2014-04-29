@@ -1,17 +1,19 @@
 from itertools import count
 
 def is_palindrome(num):
-        numString = str(num)
-        if numString == numString[::-1]:
+        string = str(num)
+        if string == string[::-1]:
                 return True
-        
+
+list = []
 total = 0
-palindromeList = []
-counted = 0
 
 for i in count():
-        if counted >= 2000:
-                break
-
+        
         if is_palindrome(i):
-                print(i)
+                list.append(i)
+
+                if len(list) > 2000:
+                        total = sum(list)
+                        break
+print(total)
