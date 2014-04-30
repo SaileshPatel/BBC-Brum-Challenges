@@ -13,7 +13,7 @@ for i in count():
         if is_palindrome(i):
                 list.append(i)
 
-                if len(list) > 2000:
+                if len(list) >= 2000:
                         total = sum(list)
                         break
 print(total)
