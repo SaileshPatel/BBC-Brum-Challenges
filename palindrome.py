@@ -5,15 +5,14 @@ def is_palindrome(num):
         if string == string[::-1]:
                 return True
 
-list = []
 total = 0
+counted = 0
 
 for i in count():
-        
         if is_palindrome(i):
-                list.append(i)
+            total += i
+            counted += 1
+        if counted == 2000:
+            break
 
-                if len(list) >= 2000:
-                        total = sum(list)
-                        break
 print(total)
